@@ -1,13 +1,10 @@
- # Leetcode 
+# David Leetcode 
 
-    - sol                leetcode solution to Shortname \\ code in desc
-    - solv               main executable solv -prob 0001
-    - shr                shared function "library" for leetcode
+leetcode solution in Go
 
-    - old\_myhashset     unknow catalog
-    - .archive            stored old catalogs
+## Catalog structure
 
- ## leetcode problem list
+    * /lt Problem solutions structured lt/0001/twoSum/twoSum.go with func TwoSum 
+    * /other catalog for code that can be shared between solutions
 
- 1481. Least Number of Unique Integers after K Removals = leastuni
- 724. Find Pivot Index                                  = pivoind
+
