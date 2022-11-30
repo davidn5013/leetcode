@@ -1,0 +1,6 @@
+*.exe
+.archive
+.archive/**
+.arkiv
+.arkiv/**
+*läsmig*
