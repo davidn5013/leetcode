@@ -1,6 +1,6 @@
-# David Leetcode 
+# Davids Leetcode 
 
-leetcode solution in Go
+leetcode solutions in Go
 
 ## Catalog structure
 

@@ -1,4 +1,4 @@
-package isValid
+package leetcode
 
 import (
 	"fmt"
@@ -11,15 +11,8 @@ func TestIsValid(t *testing.T) {
 		s    string
 		want bool
 	}{
-		{
-			"()", true,
-		},
-		{
-			"()[]{}", true,
-		},
-		{
-			"(]", false,
-		},
+		{"()", true}, {"()[]{}", true}, {"(]", false},
+		{"{[]}", true}, {"{[()]}", true}, {"{[(])", false},
 	}
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%s,%v", tt.s, tt.want)
