@@ -41,8 +41,8 @@ type ListNode struct {
 	Next *ListNode
 }
 
-// New return pointer too new linked list of int values
-func New(val int) *ListNode {
+// NewListNode return pointer too new linked list of int values
+func NewListNode(val int) *ListNode {
 	l := ListNode{
 		Val:  val,
 		Next: nil,

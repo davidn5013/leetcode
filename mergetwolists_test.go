@@ -5,8 +5,8 @@ import (
 )
 
 func TestMergeTwoSortedList(t *testing.T) {
-	l1 := New(11)
-	l2 := New(12)
+	l1 := NewListNode(11)
+	l2 := NewListNode(12)
 
 	l1.Insert(21)
 	l1.Insert(31)

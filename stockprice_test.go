@@ -69,7 +69,7 @@ func TestMaxProfitMulti(t *testing.T) {
 }
 
 func TestMaxProfitBigTest(t *testing.T) {
-	b, err := os.ReadFile("res/stockprice_testfile.txt")
+	b, err := os.ReadFile("testdata/stockprice_testfile.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
