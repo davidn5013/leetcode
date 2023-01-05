@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-// CanConstruct can string a letter be taken out of string b
+// CanConstruct 0383 can string a letter be taken out of string b
 // a taken from b false
 // aa taken from ab false
 // aa taken from aab true

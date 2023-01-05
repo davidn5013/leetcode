@@ -8,7 +8,7 @@ import (
 // 125. Valid Palindrome
 // https://leetcode.com/problems/valid-palindrome/
 
-// IsPalindrome check if the alfanumerics is palindrome in lowercase returning true if so
+// IsPalindrome 0125 check if the alfanumerics is palindrome in lowercase returning true if so
 func IsPalindrome(s string) bool {
 	// Keep alfanumerics
 	var sb strings.Builder

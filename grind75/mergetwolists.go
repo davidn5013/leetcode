@@ -5,7 +5,7 @@ import "github.com/davidn5013/leetcode/tools/ds"
 // 21. Merge Two Sorted Lists
 // https://leetcode.com/problems/merge-two-sorted-lists/
 
-// MergeTwoSortedLists Join two sorted list to one. l1+l2=l2
+// MergeTwoSortedLists 0021 Join two sorted list to one. l1+l2=l2
 // Warning corrupt l1 and changes l2 to two the new join list
 func MergeTwoSortedLists(l1 *ds.ListNode, l2 *ds.ListNode) *ds.ListNode {
 	dummy := new(ds.ListNode)

@@ -2,7 +2,7 @@ package grind75
 
 import ds "github.com/davidn5013/leetcode/tools/ds"
 
-// HasCycle check for cycle in list returning true if cycle exist
+// HasCycle 0141 check for cycle in list returning true if cycle exist
 func HasCycle(head *ds.ListNode) bool {
 	if head == nil || head.Next == nil {
 		return false

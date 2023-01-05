@@ -7,7 +7,7 @@ import (
 
 // leetcode 110. Balanced Binary Tree https://leetcode.com/problems/balanced-binary-tree/
 
-// IsBalanced test if a simple tree node is balanced
+// IsBalanced 0110 test if a simple tree node is balanced
 func IsBalanced(root *ds.TreeNode) bool {
 	if root == nil {
 		return true

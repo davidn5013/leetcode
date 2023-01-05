@@ -15,7 +15,7 @@ var floodfillDirection = []p.Pos{
 	{Row: 0, Col: -1},
 }
 
-// FloodFill fills the region starting at point (sr,sc) with color and returns the
+// FloodFill 0733 fills the region starting at point (sr,sc) with color and returns the
 // resulting grid. Iterative version using array of position.
 func FloodFill(image [][]int, sr, sc, color int) [][]int {
 	oldColor := image[sr][sc]

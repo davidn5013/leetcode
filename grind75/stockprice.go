@@ -9,7 +9,7 @@ import "math"
  * you sell.
  */
 
-// MaxProfit Return the maximum profit you can achieve from this transaction.
+// MaxProfit 0121 Return the maximum profit you can achieve from this transaction.
 // If you cannot achieve any profit, return 0.
 func MaxProfit(prices []int) (maxprof int) {
 	// maxLen := len(prices)

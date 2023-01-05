@@ -14,15 +14,21 @@ func TestSplitOnLetter(t *testing.T) {
 	}
 }
 
-func TestLongestPalindrom(t *testing.T) {
-	got := LongestPalindrom("abccccdd")
+func TestLongestPalindrome(t *testing.T) {
+	got := LongestPalindrome("abccccdd")
 	want := 7
 	if got != want {
-		t.Errorf("LongestPlaindrom got = %d; want %d", got, want)
+		t.Errorf("LongestPlaindrom1 got = %d; want %d", got, want)
 	}
-	got = LongestPalindrom("ccc")
+	got = LongestPalindrome("ccc")
 	want = 3
 	if got != want {
-		t.Errorf("LongestPlaindrom got = %d; want %d", got, want)
+		t.Errorf("LongestPlaindrom2 got = %d; want %d", got, want)
+	}
+
+	got = LongestPalindrome("ababababa")
+	want = 9
+	if got != want {
+		t.Errorf("LongestPlaindrom3 got = %d; want %d", got, want)
 	}
 }

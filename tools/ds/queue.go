@@ -1,6 +1,6 @@
 package ds
 
-// Queue storing int
+// Queue 0232 storing int
 type Queue struct {
 	items []int
 }

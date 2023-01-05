@@ -7,7 +7,7 @@ import (
 
 // 242. Valid Anagram
 
-// IsAnagram Two word have same letters but diffent order.
+// IsAnagram 0242 Two word have same letters but diffent order.
 // "nagaram" is anagram of "anagram".
 func IsAnagram(s, t string) bool {
 	if len(s) != len(t) {

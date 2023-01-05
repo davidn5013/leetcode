@@ -15,7 +15,7 @@ PASS
 ok      toBeSorted/test/2973525193      3.264s
 */
 
-// climbStairs in how many distinct ways can you climb to the top of n stairs? This a iterativel fast version.
+// climbStairs 0070 in how many distinct ways can you climb to the top of n stairs? This a iterativel fast version.
 /*
 The number of ways to climb the stairs is equal to the sum of the number of ways to climb the
 stairs from the previous step and the number of ways to climb the stairs from two steps ago.

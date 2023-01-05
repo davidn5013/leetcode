@@ -38,8 +38,42 @@ comban and add singel
 result is multi by 2
 */
 
-// LongestPalingdrome how many letter in palindrome char mix made by they letter, case senitive
-func LongestPalindrom(s string) (res int) {
+// LongestPalingdrome 0409 how many letter in palindrome char mix made by they letter, case senitive
+// Support only rune until 256 skip char above
+func LongestPalindrome(s string) (res int) {
+	// Solution from https://github.com/chai2010/LeetCode-in-Go/blob/master/Algorithms/0409.longest-palindrome/longest-palindrome.go
+	// Many thank to chai2010
+	const maxRunevalue = 256
+	a := make([]int, maxRunevalue) // Ascii number until 256 with count for ever char
+	for i := range s {
+		// What is this? s[i] = rune ascii number so a = a[65]++ how many a is inte list
+		if int(s[i]) < maxRunevalue+1 {
+			a[s[i]]++
+		}
+	}
+
+	hasOdd := 0
+	for i := range a {
+		if a[i] == 0 {
+			continue
+		}
+		// Check for even (9&1=1, 8&1=0)
+		if a[i]&1 == 0 {
+			res += a[i]
+		} else {
+			// Odd exampel 7 then add 6
+			res += a[i] - 1
+			hasOdd = 1
+		}
+	}
+
+	return res + hasOdd
+}
+
+/*
+  Did not work. Can take string like "ccc" is much more ivolved then the version above
+
+func defektLongestPalindrome(s string) (res int) {
 	// store one singel
 	one := false
 	// split string in words here?
@@ -48,6 +82,7 @@ func LongestPalindrom(s string) (res int) {
 		return len(grps[0])
 	}
 	for _, grp := range grps {
+		r := res
 		switch {
 		case len(grp) == 1 && one == false:
 			one = true
@@ -59,15 +94,19 @@ func LongestPalindrom(s string) (res int) {
 				res += len(grp) - 1
 			}
 		}
+		log.Printf("grp %s %d\n", grp, res-r)
 	}
 	return res
 
 }
+*/
+
+/* This SplitOnLetter was made for LongestPalindrome but can be use full so I keepit
+even do the LongestPalindrome did not work */
 
 // SplitOnLetter split a string on new letter
 // "abccccdd" will result in [a b ccc dd]
 // "abcabc" will split in "aa","bb","cc"
-// "KalleKula" will split in to "aa", "e" , "KK", "lll" ,"u" ** Is this right?
 func SplitOnLetter(s string) (res []string) {
 	// Need a sorted string
 	sorted := func(w string) string {

@@ -7,7 +7,7 @@ import (
 // 226. Invert Binary Tree
 // https://leetcode.com/problems/invert-binary-tree/
 
-// InvertTree Resurcive Input: root = [2,1,3] Output: [2,3,1]
+// InvertTree 0226 Resurcive Input: root = [2,1,3] Output: [2,3,1]
 func InvertTree(root *t.TreeNode) *t.TreeNode {
 	if root == nil {
 		return nil
