@@ -1,5 +1,4 @@
-// Package leetcode Collection of function from the Grind 75 and more
-package leetcode
+package grind75
 
 // 704. Binary Search
 

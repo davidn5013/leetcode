@@ -1,4 +1,4 @@
-package leetcode
+package grind75
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 // 125. Valid Palindrome
 // https://leetcode.com/problems/valid-palindrome/
 
-// IsPalindrome check if the alfanumerics is palindrome returning true if so
+// IsPalindrome check if the alfanumerics is palindrome in lowercase returning true if so
 func IsPalindrome(s string) bool {
 	// Keep alfanumerics
 	var sb strings.Builder

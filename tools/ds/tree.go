@@ -14,31 +14,34 @@ func NewTreeNode() *TreeNode {
 	return &TreeNode{}
 }
 
-// PrintInOrder prints the values of the nodes in the binary tree in in-order traversal order.
-func (t *TreeNode) PrintInOrder() {
-	if t == nil {
-		return
-	}
-
-	fmt.Print(t.Val, " ")
-	t.Left.PrintInOrder()
-	t.Right.PrintInOrder()
-}
-
 // Set value root node
 func (t *TreeNode) Set(val int) {
 	t.Val = val
 }
 
-// Not realy need for this leetcode but this give antoher view and is a stringer example to keep
-func (t *TreeNode) String() string {
+// PrintTree print the hollow tree
+func PrintTree(root *TreeNode) {
+	printTreeRecursive(root)
+	fmt.Println()
+}
+
+func printTreeRecursive(root *TreeNode) {
+	if root == nil {
+		return
+	}
+	fmt.Printf("%d ", root.Val)
+	printTreeRecursive(root.Left)
+	printTreeRecursive(root.Right)
+}
+
+// PrintInOrder prints the values of the nodes in the binary tree in in-order traversal order.
+func (t *TreeNode) PrintInOrder() {
 	if t == nil {
-		return " "
+		return
 	}
-	if t.Left == nil && t.Right == nil {
-		return fmt.Sprintf("%d", t.Val)
-	}
-	return fmt.Sprintf("%d %s %s", t.Val, t.Left.String(), t.Left.String())
+	fmt.Print(t.Val, " ")
+	t.Left.PrintInOrder()
+	t.Right.PrintInOrder()
 }
 
 // PrintBreadthFirst prints the values of the nodes in the binary tree in breadth-first order.
@@ -47,7 +50,6 @@ func (t *TreeNode) PrintBreadthFirst(root *TreeNode) (res string) {
 	if root == nil {
 		return
 	}
-
 	queue := []*TreeNode{root}
 	for len(queue) > 0 {
 		node := queue[0]
@@ -64,6 +66,14 @@ func (t *TreeNode) PrintBreadthFirst(root *TreeNode) (res string) {
 		}
 	}
 	return res
+}
+
+// Not realy need for this leetcode but this give antoher view and is a stringer example to keep
+func (t *TreeNode) String() string {
+	if t == nil {
+		return "nil"
+	}
+	return fmt.Sprintf("%v {%v %v}", t.Val, t.Left.String(), t.Right.String())
 }
 
 // From Chat GPT

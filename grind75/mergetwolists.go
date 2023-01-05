@@ -1,4 +1,4 @@
-package leetcode
+package grind75
 
 import "github.com/davidn5013/leetcode/tools/ds"
 

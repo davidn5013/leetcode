@@ -1,4 +1,4 @@
-package leetcode
+package grind75
 
 // TwoSum 0001. Two Sum
 // Given an array of integers nums and an integer target,

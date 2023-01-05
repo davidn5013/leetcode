@@ -1,4 +1,4 @@
-package leetcode
+package grind75
 
 import (
 	"sort"

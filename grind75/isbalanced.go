@@ -1,6 +1,9 @@
-package leetcode
+package grind75
 
-import "github.com/davidn5013/leetcode/tools/ds"
+import (
+	t "github.com/davidn5013/leetcode/tools"
+	ds "github.com/davidn5013/leetcode/tools/ds"
+)
 
 // leetcode 110. Balanced Binary Tree https://leetcode.com/problems/balanced-binary-tree/
 
@@ -19,7 +22,7 @@ func IsBalanced(root *ds.TreeNode) bool {
 		}
 		leftHeight := getHeight(node.Left)
 		rightHeight := getHeight(node.Right)
-		if abs(leftHeight-rightHeight) > 1 {
+		if t.AbsInt(leftHeight-rightHeight) > 1 {
 			return false
 		}
 		stack = append(stack, node.Left, node.Right)
@@ -31,19 +34,5 @@ func getHeight(node *ds.TreeNode) int {
 	if node == nil {
 		return 0
 	}
-	return 1 + max(getHeight(node.Left), getHeight(node.Right))
-}
-
-func max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
-
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
+	return 1 + t.MaxInt(getHeight(node.Left), getHeight(node.Right))
 }

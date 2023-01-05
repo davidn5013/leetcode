@@ -3,4 +3,5 @@
 :: watchrun can be downloaded, 
 :: clear is part of githubs suit
 :: gchk just my script for running  2 extra linter, one error check and code examinator
-@watchrun -care *.go -interval 1700ms bg "go vet ./... && clear & go test ./... && clear & gchk ./..."
+@watchrun -care *.go -interval 1700ms bg "clear & go vet ./... && go test ./... && gchk ./..."
+
