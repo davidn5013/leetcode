@@ -10,7 +10,6 @@ func InsertIntAt(inp []int, position int, value []int) (res []int, err error) {
 	}
 
 	elements := len(value)
-
 	res = append(inp[:position], append(make([]int, elements), inp[position:]...)...)
 
 	for _, v := range value {
@@ -32,7 +31,6 @@ func InsertAt[K comparable](inp []K, position int, value []K) (res []K, err erro
 	}
 
 	elements := len(value)
-
 	res = append(inp[:position], append(make([]K, elements), inp[position:]...)...)
 
 	for _, v := range value {

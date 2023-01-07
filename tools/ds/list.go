@@ -20,6 +20,46 @@ func NewListNode(val int) *ListNode {
 	return &l
 }
 
+// Set the value of the current node
+func (n *ListNode) Set(val int) {
+	n.Val = val
+}
+
+// Get the value of the current node
+func (n *ListNode) Get() int {
+	return n.Val
+}
+
+// Insert a new node with value `val` after the current node
+func (n *ListNode) Insert(val int) {
+	newNode := &ListNode{Val: val, Next: n.Next}
+	n.Next = newNode
+}
+
+// Head return the head node of the list
+func (n *ListNode) Head() *ListNode {
+	head := n
+	for head.Next != nil {
+		head = head.Next
+	}
+	return head
+}
+
+// MiddleNode return pointer to middle of linked list
+func (n *ListNode) MiddleNode() *ListNode {
+	mid := n
+	end := n
+	for end.Next != nil && end.Next.Next != nil {
+		end = end.Next.Next
+		mid = mid.Next
+	}
+	if end.Next != nil {
+		mid = mid.Next
+	}
+	return mid
+}
+
+/*
 // Insert a new node of int value in ListNode
 func (l *ListNode) Insert(val int) {
 	newnode := &ListNode{
@@ -37,12 +77,13 @@ func (l *ListNode) Insert(val int) {
 		n.Next = newnode
 	}
 }
+*/
 
 // String Stringer for ListNode usage fmt.Println("%s",newLinkelist)
-func (l *ListNode) String() (ret string) {
+func (n *ListNode) String() (ret string) {
 	var (
 		nodeCount int
-		nextNode  = l
+		nextNode  = n
 	)
 
 	for {
@@ -58,9 +99,9 @@ func (l *ListNode) String() (ret string) {
 }
 
 // SortArray Sorts ListNode by converting to array and returning new ListNode
-func (l *ListNode) SortArray() {
+func (n *ListNode) SortArray() {
 	var nodeCount int
-	var nextNode = l
+	var nextNode = n
 
 	// Count nodes
 	for {
@@ -75,7 +116,7 @@ func (l *ListNode) SortArray() {
 	sortArray := make([]int, nodeCount)
 
 	var index int
-	nextNode = l
+	nextNode = n
 	// fill sortArray
 	for {
 		sortArray[index] = nextNode.Val
@@ -90,7 +131,7 @@ func (l *ListNode) SortArray() {
 	sort.Ints(sortArray)
 
 	index = 0
-	nextNode = l
+	nextNode = n
 	// fill node with sorted array
 	for {
 		nextNode.Val = sortArray[index]
