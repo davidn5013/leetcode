@@ -4,7 +4,7 @@
 
 ### I doing the Grind 75 from (https://www.techinterviewhandbook.org/grind75)
 
-#### Do so fare 2023-01-05
+#### Done so fare 2023-01-05
 
 ```text
 package grind75 // import "github.com/davidn5013/leetcode/grind75"
