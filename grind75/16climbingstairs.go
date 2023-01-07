@@ -15,7 +15,7 @@ PASS
 ok      toBeSorted/test/2973525193      3.264s
 */
 
-// climbStairs 0070 in how many distinct ways can you climb to the top of n stairs? This a iterativel fast version.
+// ClimbStairs 0070 in how many distinct ways can you climb to the top of n stairs? This a iterativel fast version.
 /*
 The number of ways to climb the stairs is equal to the sum of the number of ways to climb the
 stairs from the previous step and the number of ways to climb the stairs from two steps ago.
@@ -54,7 +54,7 @@ func ClimbStairs(n int) int {
 	return f2
 }
 
-// ClimbStairs This the slow recursive version! In how many distinct ways can you climb to the top of n stairs?
+// ClimbStairsRecursive This the slow recursive version! In how many distinct ways can you climb to the top of n stairs?
 func ClimbStairsRecursive(n int) int {
 	switch {
 	case n < 1:

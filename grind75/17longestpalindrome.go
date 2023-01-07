@@ -38,7 +38,7 @@ comban and add singel
 result is multi by 2
 */
 
-// LongestPalingdrome 0409 how many letter in palindrome char mix made by they letter, case senitive
+// LongestPalindrome 0409 how many letter in palindrome char mix made by they letter, case senitive
 // Support only rune until 256 skip char above
 func LongestPalindrome(s string) (res int) {
 	// Solution from https://github.com/chai2010/LeetCode-in-Go/blob/master/Algorithms/0409.longest-palindrome/longest-palindrome.go
