@@ -1,8 +1,6 @@
 package grind75
 
 import (
-	"fmt"
-	"log"
 	r "math/rand"
 	"testing"
 
@@ -45,7 +43,7 @@ func RandomLinkedList() *ds.ListNode {
 	for i := 0; i < 5; i++ {
 		node = node.Next
 	}
-	fmt.Println(node.Get())
+	// fmt.Println(node.Get())
 
 	// Insert a new node with value 50 after the eighth node
 	node = head
@@ -55,7 +53,7 @@ func RandomLinkedList() *ds.ListNode {
 	node.Insert(50)
 
 	// Get the head node of the list
-	log.Println(head)
+	// log.Println(head)
 
 	return head
 }
