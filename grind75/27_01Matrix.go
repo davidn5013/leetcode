@@ -2,7 +2,7 @@ package grind75
 
 import "github.com/davidn5013/leetcode/tools"
 
-// UpdateMatrix return distans of nearest o for each cell
+// DistansToZeroInMatrix return distans of nearest o for each cell
 // Exampel
 // Input  Result
 // 0 0 0  0 0 0

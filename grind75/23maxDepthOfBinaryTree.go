@@ -5,6 +5,9 @@ import (
 	"github.com/davidn5013/leetcode/tools/ds"
 )
 
+// Leetcode 104 Grind75 number 23
+
+// MaxDepth return its maximum depth of the binary tree TreeNode
 func MaxDepth(root *ds.TreeNode) int {
 	if root == nil {
 		return 0

@@ -1,12 +1,3 @@
-# Davids Leetcode 
-
-## leetcode solutions in Go
-
-### I doing the Grind 75 from (https://www.techinterviewhandbook.org/grind75)
-
-#### Done so fare 2023-01-08
-
-```text
 package grind75 // import "github.com/davidn5013/leetcode/grind75"
 
 Package grind75 75 questions customize leetCode study
@@ -304,6 +295,4 @@ func (t *TreeNode) Set(val int)
 func (t *TreeNode) String() string
     Not realy need for this leetcode but this give antoher view and is a
     stringer example to keep
-```
-
 
