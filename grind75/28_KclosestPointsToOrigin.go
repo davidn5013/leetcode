@@ -1,34 +1,26 @@
 package grind75
 
+import "github.com/davidn5013/leetcode/tools"
+
 // Leetcode 973 Grind75 number 28
 
-// Kclosest return distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 + (y1 - y2)2).
-// k is the how many of the closes point we want
-func Kclosest(points [][]int, k int) (res [][]int) {
-	// we can't as for more point then we get
-	if len(points) > k {
-		return nil
+// Kclosest sort input array after distant to zero (0,0) return k part of array
+// Original array is intact BUT not it's order!
+func Kclosest(res [][]int, k int) [][]int {
+	for i := 1; i < len(res); i++ {
+		if i >= 1 {
+
+			// distance from 0,0 to coordination previous and current in the on loop
+			distPrev := tools.EucliDistSquared(0, 0, res[i-1][0], res[i-1][1])
+			dist := tools.EucliDistSquared(0, 0, res[i][0], res[i][1])
+
+			// Sorting input array points
+			if distPrev > dist {
+				res[i-1], res[i] = res[i], res[i-1]
+				i -= 2
+			}
+		}
 	}
 
-	// Testing EculideanDistInt()
-	// log.Println(EculideanDistSqrtInt(0, 0, 1, 3))
-	// return 10
-	// works
-
-	return [][]int{{0}}
-}
-
-// EuclideanDistSqrtInt return euclidean distance  √(x1 - x2)2 + (y1 - y2)2).
-// Return value before square root
-// Exampel
-// fmt.Println(EculideanDistSqrtInt(0,0,1,3))
-// 10
-func EculideanDistSqrtInt(x1, y1, x2, y2 int) int {
-	return Square(x1-x2) + Square(y1-y2)
-
-}
-
-// Square return n*n
-func Square(n int) int {
-	return n * n
+	return res[:k]
 }
