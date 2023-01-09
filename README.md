@@ -56,9 +56,9 @@ func DiameterOfBinaryTree(root *ds.TreeNode) int
     DiameterOfBinaryTree return the length of the diameter of the tree.
 
 func DistansToZeroInMatrix(mat [][]int) (res [][]int)
-    UpdateMatrix return distans of nearest o for each cell Exampel Input Result
-    0 0 0 0 0 0 0 1 0 0 1 0 1 1 1 1 2 1 2,1 has 2 because that how meen sideway
-    or up that is need to get to 0
+    DistansToZeroInMatrix return distans of nearest o for each cell Exampel
+    Input Result 0 0 0 0 0 0 0 1 0 0 1 0 1 1 1 1 2 1 2,1 has 2 because that how
+    meen sideway or up that is need to get to 0
 
 func FloodFill(image [][]int, sr, sc, color int) [][]int
     FloodFill 0733 fills the region starting at point (sr,sc) with color and
@@ -98,6 +98,10 @@ func IsValid(s string) bool
     order. Every close bracket has a corresponding open bracket of the same
     type.
 
+func Kclosest(res [][]int, k int) [][]int
+    Kclosest sort input array after distant to zero (0,0) return k part of array
+    Original array is intact BUT not it's order!
+
 func Lca(root, p, q *t.TreeNode) *t.TreeNode
     Lca 0235 Lowest Common Ancestor of a Binary Search Tree
 
@@ -110,6 +114,8 @@ func MajorityElement(nums []int) int
     []int{2,2,1,1,1,2,2} hase four number of twos result in : 2
 
 func MaxDepth(root *ds.TreeNode) int
+    MaxDepth return its maximum depth of the binary tree TreeNode
+
 func MaxProfit(prices []int) (maxprof int)
     MaxProfit 0121 Return the maximum profit you can achieve from this
     transaction. If you cannot achieve any profit, return 0.
@@ -158,8 +164,26 @@ FUNCTIONS
 func AbsInt(x int) int
     AbsInt 1=1 -1=1 (by doing -1 * -1 = 1)
 
+func Copy2dInt(src [][]int) (des [][]int)
+    Copy2dInt make copy [][]int 2d array.
+
 func EqualMatrix(a, b [][]int) (res bool)
     EqualMatrix return two are the same [][]int
+
+func EucliDistSquared(x1, y1, x2, y2 int) int
+    EucliDistSquared return part of euclidean distance (x1 - x2)2 + (y1 - y2)2
+
+    The full is euclidean distance is (sqrt) √(x1 - x2)2 + (y1 - y2)2) but this
+    function is meant to be used to compare the short distance so if the answer
+    is square 2 too big does not matter.
+
+    If the correct euclidean distance is need remember to
+    int(math.Ceil(float64(EucliDistSquared(x,y)))) the result
+
+    Example fmt.Println(EucliDistSquared(0,0,1,3)) // OutPut : 10
+
+    log.Println(math.Ceil(math.Sqrt(float64(EucliDistSquared(0, 0, 1, 3))))) //
+    This is the real distans // OutPut : 4
 
 func InsertAt[K comparable](inp []K, position int, value []K) (res []K, err error)
     InsertAt insert []genric at position in array
@@ -172,6 +196,9 @@ func MaxInt(x, y int) int
 
 func MinInt(x, y int) int
     MinInt smallest number of x, y in int
+
+func Square(n int) int
+    Square return n*n.
 
 package ds // import "github.com/davidn5013/leetcode/tools/ds"
 
@@ -305,5 +332,3 @@ func (t *TreeNode) String() string
     Not realy need for this leetcode but this give antoher view and is a
     stringer example to keep
 ```
-
-
