@@ -43,3 +43,39 @@ func InsertAt[K comparable](inp []K, position int, value []K) (res []K, err erro
 	return res, nil
 
 }
+
+// EqualMatrix return two are the same [][]int
+func EqualMatrix(a, b [][]int) (res bool) {
+	if len(a) != len(b) {
+		return false
+	}
+	res = true
+
+	for idx1, arr1 := range a {
+		if len(arr1) != len(b[1]) {
+			res = false
+			break
+		}
+		arr2 := b[idx1]
+		for idx2, value1 := range arr1 {
+			value2 := arr2[idx2]
+			if value1 != value2 {
+				res = false
+				goto endloop
+			}
+		}
+	}
+endloop:
+	return res
+}
+
+// Copy2dInt make copy [][]int 2d array.
+func Copy2dInt(src [][]int) (des [][]int) {
+	// copy mat to res
+	des = make([][]int, len(src))
+	for i := range src {
+		des[i] = make([]int, len(src[i]))
+		copy(des[i], src[i])
+	}
+	return des
+}
