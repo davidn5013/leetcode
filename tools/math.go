@@ -1,5 +1,10 @@
 package tools
 
+import (
+	"fmt"
+	"math/big"
+)
+
 // MaxInt bigest number of x, y in int
 func MaxInt(x, y int) int {
 	if x > y {
@@ -48,4 +53,29 @@ func EucliDistSquared(x1, y1, x2, y2 int) int {
 // Square return n*n.
 func Square(n int) int {
 	return n * n
+}
+
+// BinStrToBigInt return "101010" return Big.Int with 101010 stored as int
+func BinStrToBigInt(s string) *big.Int {
+	ret, ok := big.NewInt(0).SetString(s, 2)
+	if !ok {
+		fmt.Println("SetString: Error")
+		return big.NewInt(0)
+	}
+	return ret
+}
+
+// BigIntToBinStr Rerturn a big.Int as a String with binary value
+func BigIntToBinStr(b *big.Int) string {
+	return fmt.Sprintf("%b", b)
+}
+
+// BinStrAdd add to string with binary valued and returns it sum
+// as Big.Int
+// Example BinStrAdd("111101","10") returns "111111"
+// return 0 convert error and print "SetString: Error"
+func BinStrAdd(s, a string) *big.Int {
+	ret := BinStrToBigInt(s)
+	add := BinStrToBigInt(a)
+	return ret.Add(ret, add)
 }
