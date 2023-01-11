@@ -28,6 +28,5 @@ func lengthOfLongestSubstring(s string) int {
 	}
 
 	maxLen = tools.MaxInt(maxLen, len(visited))
-	visited = nil
 	return maxLen
 }
