@@ -14,7 +14,7 @@ Package grind75 75 questions customize leetCode study
 FUNCTIONS
 
 func AddBinary(a string, b string) (res string)
-    AddBinary add too a string of binaries "11"+"1"="100" Arbitrary length
+    AddBinary add too a string of binaries "11"+"1"="100". Arbitrary length
 
 func CanConstruct(a string, b string) bool
     CanConstruct 0383 can string a letter be taken out of string b a taken from
@@ -54,6 +54,10 @@ func ContainDuplicate(nums []int) (res bool)
 
 func DiameterOfBinaryTree(root *ds.TreeNode) int
     DiameterOfBinaryTree return the length of the diameter of the tree.
+
+func DistThreeSum(nums []int) [][]int
+    DistThreeSum return all the triplets [nums[i], nums[j], nums[k]] such that i
+    != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
 func DistansToZeroInMatrix(mat [][]int) (res [][]int)
     DistansToZeroInMatrix return distans of nearest o for each cell Exampel
@@ -163,6 +167,17 @@ FUNCTIONS
 
 func AbsInt(x int) int
     AbsInt 1=1 -1=1 (by doing -1 * -1 = 1)
+
+func BigIntToBinStr(b *big.Int) string
+    BigIntToBinStr Rerturn a big.Int as a String with binary value
+
+func BinStrAdd(s, a string) *big.Int
+    BinStrAdd add to string with binary valued and returns it sum as Big.Int
+    Example BinStrAdd("111101","10") returns "111111" return 0 convert error and
+    print "SetString: Error"
+
+func BinStrToBigInt(s string) *big.Int
+    BinStrToBigInt return "101010" return Big.Int with 101010 stored as int
 
 func Copy2dInt(src [][]int) (des [][]int)
     Copy2dInt make copy [][]int 2d array.
