@@ -109,6 +109,9 @@ func Kclosest(res [][]int, k int) [][]int
 func Lca(root, p, q *t.TreeNode) *t.TreeNode
     Lca 0235 Lowest Common Ancestor of a Binary Search Tree
 
+func LevelOrder(t *ds.TreeNode) (res [][]int)
+    LevelOrder return TreeNode as [][]int
+
 func LongestPalindrome(s string) (res int)
     LongestPalindrome 0409 how many letter in palindrome char mix made by they
     letter, case senitive Support only rune until 256 skip char above
@@ -331,6 +334,24 @@ func (t *TreeNode) InsertRight(val int)
     current node. If the current node does not have a right child, it creates a
     new node. TODO Does not work!
 
+func (t *TreeNode) LevelOrderArr() (res [][]int)
+    LevelOrderArr return TreeNode as [][]int
+
+func (t *TreeNode) MidOrder()
+    MidOrder Print Tree Left -> Data -> Right Example t.Val=3; t.Left.Val=9;
+    t.Right.Val=20; t.Right.Left.Val=15; t.Right.Right.Val=7 Print as : 9 3 15
+    20 7
+
+func (t *TreeNode) PostOrder()
+    PostOrder Print tree Left -> Right -> Data Example t.Val=3; t.Left.Val=9;
+    t.Right.Val=20; t.Right.Left.Val=15; t.Right.Right.Val=7 Print as : 9 15 7
+    20 3
+
+func (t *TreeNode) PreOrder()
+    PreOrder Print tree Data -> left -> right order Example t.Val=3;
+    t.Left.Val=9; t.Right.Val=20; t.Right.Left.Val=15; t.Right.Right.Val=7 Print
+    as : 3 9 20 15 7
+
 func (t *TreeNode) PrintBreadthFirst(root *TreeNode) (res string)
     PrintBreadthFirst prints the values of the nodes in the binary tree in
     breadth-first order. Not realy need for this leetcode but this give antoher
@@ -346,4 +367,5 @@ func (t *TreeNode) Set(val int)
 func (t *TreeNode) String() string
     Not realy need for this leetcode but this give antoher view and is a
     stringer example to keep
+
 ```
