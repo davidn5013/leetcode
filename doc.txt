@@ -58,7 +58,7 @@ func DistansToZeroInMatrix(mat [][]int) (res [][]int)
     meen sideway or up that is need to get to 0
 
 func EvalRPN(tokens []string) (res int)
-    Eval reverse polish notation like "2","1","+","3","*" to 6
+    EvalRPN reverse polish notation like "2","1","+","3","*" to 6
 
 func FloodFill(image [][]int, sr, sc, color int) [][]int
     FloodFill 0733 fills the region starting at point (sr,sc) with color and
@@ -376,4 +376,24 @@ func (t *TreeNode) Set(val int)
 func (t *TreeNode) String() string
     Not realy need for this leetcode but this give antoher view and is a
     stringer example to keep
+
+type Trie struct {
+	// Has unexported fields.
+}
+    Trie node store word for easy find
+
+func Constructor() Trie
+    Constructor same as NewTrie to comply with leetcode
+
+func NewTrie() Trie
+    NewTrie pointer to new trie struct
+
+func (t *Trie) Insert(word string)
+    Insert new order
+
+func (t *Trie) Search(word string) bool
+    Search for word in trie
+
+func (t *Trie) StartsWith(prefix string) bool
+    StartsWith for word starting with in trie
 
