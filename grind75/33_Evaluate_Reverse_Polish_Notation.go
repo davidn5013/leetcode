@@ -1,7 +1,6 @@
 package grind75
 
 import (
-	"errors"
 	"log"
 	"strconv"
 )
@@ -9,7 +8,7 @@ import (
 // leetcode 150. Evaluate Reverse Polish Notation
 // Grind75 number 33
 
-// Eval reverse polish notation like
+// EvalRPN reverse polish notation like
 // "2","1","+","3","*" to 6
 func EvalRPN(tokens []string) (res int) {
 	var values []int
@@ -25,8 +24,7 @@ func EvalRPN(tokens []string) (res int) {
 		default:
 			i, err := strconv.Atoi(v)
 			if err != nil {
-				err := errors.New("token is not a number and not operator")
-				log.Println(err)
+				log.Println("token is not a number and not operator")
 			}
 			values = append(values, i)
 		}
@@ -54,8 +52,7 @@ func popOp(values []int, op string) []int {
 
 func pop(values []int) (x int, resValues []int) {
 	if len(values) < 1 {
-		err := errors.New("Less then two values on value stack when try to do op")
-		log.Println(err)
+		log.Println("Less then two values on value stack when try to do op")
 		return 0, []int{0}
 	}
 

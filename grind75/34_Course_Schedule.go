@@ -21,7 +21,7 @@ func canFinish(numCourses int, prerequisites [][]int) bool {
 	for _, prerequisite := range prerequisites {
 		src, dst := prerequisite[1], prerequisite[0]
 		graph[src] = append(graph[src], dst)
-		inDegree[dst] += 1
+		inDegree[dst]++
 	}
 
 	// Topological sort of graph
@@ -41,7 +41,7 @@ func canFinish(numCourses int, prerequisites [][]int) bool {
 		courseSchedule = append(courseSchedule, vertex)
 
 		for _, neighbor := range graph[vertex] {
-			inDegree[neighbor] -= 1
+			inDegree[neighbor]--
 			if inDegree[neighbor] == 0 {
 				source = append(source, neighbor)
 			}
