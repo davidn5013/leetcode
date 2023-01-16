@@ -9,11 +9,6 @@ type Trie struct {
 	words []string
 }
 
-// Constructor same as NewTrie to comply with leetcode
-func Constructor() Trie {
-	return NewTrie()
-}
-
 // NewTrie pointer to new trie struct
 func NewTrie() Trie {
 	return Trie{
