@@ -42,6 +42,9 @@ func ClimbStairsRecursive(n int) int
     ClimbStairsRecursive This the slow recursive version! In how many distinct
     ways can you climb to the top of n stairs?
 
+func CoinChange(coins []int, amount int) int
+    CoinChange return best coin denominations mix
+
 func ContainDuplicate(nums []int) (res bool)
     ContainDuplicate 0217 true if array has duplicate values
 
@@ -133,6 +136,10 @@ func MergeTwoSortedLists(l1 *ds.ListNode, l2 *ds.ListNode) *ds.ListNode
 
 func MiddleNode(head *ds.ListNode) *ds.ListNode
     MiddleNode return pointer to middle of list
+
+func ProductExceptSelf(nums []int) (res []int)
+    ProductExceptSelf return an array answer such that answer[i] is equal to the
+    product of all the elements of nums except nums[i].
 
 func ReverseList(head *ds.ListNode) *ds.ListNode
     ReverseList 0206 Reverse a linked list 1,2,3,4,5 -> 5,4,3,2,1 This leadves a
@@ -276,6 +283,29 @@ func (n *ListNode) SortArray()
 func (n *ListNode) String() (ret string)
     String Stringer for ListNode usage fmt.Println("%s",newLinkelist)
 
+type MinStack struct {
+	// Has unexported fields.
+}
+    MinStack is a stack that continuously storing minimum value Pop somewhat
+    slower then other models because it need to go trough the stack and update
+    min Push fast in this module it only a array update and a check for min
+    value
+
+func NewMinStack() MinStack
+    NewMinStack create new MinStack
+
+func (s *MinStack) GetMin() int
+    GetMin min value in stack
+
+func (s *MinStack) Pop()
+    Pop remove last value on stack
+
+func (s *MinStack) Push(val int)
+    Push new value on stack and maintain smallest value
+
+func (s *MinStack) Top() int
+    Top peek top of stack
+
 type Pos struct {
 	Row int
 	Col int
@@ -381,9 +411,6 @@ type Trie struct {
 	// Has unexported fields.
 }
     Trie node store word for easy find
-
-func Constructor() Trie
-    Constructor same as NewTrie to comply with leetcode
 
 func NewTrie() Trie
     NewTrie pointer to new trie struct
