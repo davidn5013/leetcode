@@ -27,11 +27,10 @@ func ProductExceptSelf(nums []int) (res []int) {
 	// TODO better names for lhs, rhs
 	lhs, rhs := 1, 1
 	res = make([]int, n)
-
 	// Prepping res with 1, remember to change this if you add och subtracting
-	for i := 0; i < n; i++ {
-		res[i] = 1
-	}
+	// for i := 0; i < n; i++ {
+	// 	res[i] = 1
+	// }
 
 	// This Variation while do left and right
 	// instead first filling res with value instead doing this
@@ -42,6 +41,8 @@ func ProductExceptSelf(nums []int) (res []int) {
 	// both version are O(N) but this save some calculation time
 	for i := 0; i < n; i++ {
 		// TODO I don't get this algorithm fully so need get back to it
+		// Prepping res with 1, remember to change this if you add och subtracting
+		res[i], res[n-1] = 1, 1
 		// log.Println(res)
 		res[i] *= lhs
 		res[n-i-1] *= rhs
