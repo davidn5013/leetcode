@@ -1,7 +1,6 @@
 package grind75
 
 import (
-	"fmt"
 	"testing"
 
 	"github.com/davidn5013/leetcode/tools/ds"
@@ -12,8 +11,7 @@ func TestIsValidBST1(t *testing.T) {
 
 	node := new(ds.TreeNode)
 	node.InsertArrValInTreeNode([]int{5, 4, 6, 0, 0, 3, 7})
-
-	fmt.Println(node.LevelOrderArr())
+	t.Log(node.LevelOrderArr())
 
 	got := IsValidBST(node)
 	want := false
