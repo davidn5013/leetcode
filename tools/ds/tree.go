@@ -1,6 +1,9 @@
 package ds
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 // TreeNode Binary tree storing int, left and right
 type TreeNode struct {
@@ -156,6 +159,41 @@ func (t *TreeNode) InsertRight(val int) {
 		t.Right = &TreeNode{Val: val}
 	} else {
 		t.Right.Val = val
+	}
+}
+
+// InsertArrValInTreeNode insert array in newtreenode
+func (t *TreeNode) InsertArrValInTreeNode(arr []int) {
+	// Only insert in new trees
+	if t.Val != 0 || t.Left != nil || t.Right != nil {
+		// || (len(arr)-1)%2 == 0 {
+		log.Println("fail on init")
+		return
+	}
+
+	queue := []*TreeNode{t} // fill queue start with root
+	nodeCnt := len(arr) - 1 // counter so we do not create empoty end nodes
+
+	// pop() take first value in arr and remove it
+	// and decreasing nodeCnt to skip empty nodes
+	pop := func() int { i := arr[0]; arr = arr[1:]; nodeCnt--; return i }
+
+	// Insert loop
+	for len(arr) > 0 {
+		sz := len(queue)                          // length of part of queue to run
+		for i := 0; i < sz || len(arr) > 0; i++ { // running store queue so far
+			cur := queue[i]
+			cur.Val = pop()
+
+			// No empty end nodes
+			if nodeCnt-2 > 0 {
+				cur.Left = new(TreeNode)
+				cur.Right = new(TreeNode)
+				queue = append(queue, cur.Left) // queue for next run of inner loop
+				queue = append(queue, cur.Right)
+			}
+		}
+		queue = queue[sz:] // drop part of the queue we just ran throw
 	}
 }
 
