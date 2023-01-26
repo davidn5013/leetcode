@@ -9,7 +9,10 @@ import (
 func TestIsValidBST1(t *testing.T) {
 	// [5,4,6,null,null,3,7] false
 
-	node := new(ds.TreeNode)
+	/* This test does not fail here but it fails on leetcode
+	   so there is a differens in how they storing data */
+
+	node := ds.NewTreeNode()
 	node.InsertArrValInTreeNode([]int{5, 4, 6, 0, 0, 3, 7})
 	t.Log(node.LevelOrderArr())
 

@@ -12,7 +12,7 @@ import (
 // IsValidBST valid binary tree as binary search tree
 func IsValidBST(root *ds.TreeNode) bool {
 	var (
-		parVal  = 0                       // queue of the node values from last nodes
+		parVal  int                       // queue of the node values from last nodes
 		nodeS   = make([]*ds.TreeNode, 1) // node queue
 		isValid bool                      // start false
 	)
