@@ -1,5 +1,7 @@
 package grind75
 
+import "math"
+
 // leetcode 322. Coin Change
 // Grind 75 number 36
 
@@ -34,39 +36,66 @@ Output: 0
 func CoinChange(coins []int, amount int) int {
 	dp := make([]int, amount+1)
 	dp[0] = 0
+	for i := 1; i <= amount; i++ {
+		dp[i] = math.MaxInt
+	}
+
+	lenCoins := len(coins)
 
 	for i := 1; i <= amount; i++ {
-		dp[i] = amount + 1
-		for _, c := range coins {
-			if c <= i && dp[i] > dp[i-c]+1 {
-				dp[i] = dp[i-c] + 1
+		for j := 0; j < lenCoins; j++ {
+
+			if coins[j] <= i {
+				rest := dp[i-coins[j]]
+				if rest != math.MaxInt && rest+1 < dp[i] {
+					dp[i] = rest + 1
+				}
 			}
+
 		}
 	}
 
+	res := dp[amount]
+	if res == math.MaxInt {
+		res = -1
+	}
+
+	return res
+}
+
+/*
+// Fastest on leetcode
+// https://leetcode.com/problems/coin-change/submissions/888940711/
+
+func coinChange(coins []int, amount int) int {
+	// Create a dp array with size of amount + 1 and initialize it with a large number (amount + 1)
+	dp := make([]int, amount+1)
+	for i := range dp {
+		dp[i] = amount + 1
+	}
+	dp[0] = 0
+
+	// Iterate through the coins
+	for _, coin := range coins {
+		// For each coin, starting from that coin value to the amount,
+		for i := coin; i <= amount; i++ {
+			// update the dp array by taking the minimum number of coins needed to make up that amount using that coin
+			dp[i] = min(dp[i], dp[i-coin]+1)
+		}
+	}
+
+	// check the last element of the dp array, if it is still a large number, return -1 as it is not possible to make up that amount using the given coins
 	if dp[amount] > amount {
 		return -1
 	}
-
+	// Else, return the last element as it will be the minimum number of coins needed
 	return dp[amount]
 }
 
-// coinChange return best coin denominations mix
-/* My solution that did not work it take no consideration for using lover denotation to
-get correct exchange of coins
-func coinChange(coins []int, amount int) int {
-	sort.Sort(sort.Reverse(sort.IntSlice(coins)))
-	coinUse := 0
-	for _, v := range coins {
-		for amount >= v {
-			log.Println(amount, v, coinUse)
-			amount -= v
-			coinUse++
-		}
+func min(x, y int) int {
+	if x < y {
+		return x
 	}
-	if amount < 0 {
-		return -1
-	}
-	return coinUse
+	return y
 }
 */

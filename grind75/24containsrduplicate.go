@@ -2,7 +2,7 @@ package grind75
 
 // LeetCode 217 and grind75 nr 24
 
-// ContainDuplicate 0217 true if array has duplicate values
+// ContainDuplicate true if array has duplicate values
 func ContainDuplicate(nums []int) (res bool) {
 	for i := 0; i < len(nums)-1; i++ {
 		for j := i + 1; j < len(nums); j++ {

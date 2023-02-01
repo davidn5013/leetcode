@@ -46,7 +46,7 @@ func CoinChange(coins []int, amount int) int
     CoinChange return best coin denominations mix
 
 func ContainDuplicate(nums []int) (res bool)
-    ContainDuplicate 0217 true if array has duplicate values
+    ContainDuplicate true if array has duplicate values
 
 func DiameterOfBinaryTree(root *ds.TreeNode) int
     DiameterOfBinaryTree return the length of the diameter of the tree.
@@ -101,6 +101,9 @@ func IsValid(s string) bool
     order. Every close bracket has a corresponding open bracket of the same
     type.
 
+func IsValidBST(root *ds.TreeNode) bool
+    IsValidBST valid binary tree as binary search tree
+
 func Kclosest(res [][]int, k int) [][]int
     Kclosest sort input array after distant to zero (0,0) return k part of array
     Original array is intact BUT not it's order!
@@ -137,6 +140,10 @@ func MergeTwoSortedLists(l1 *ds.ListNode, l2 *ds.ListNode) *ds.ListNode
 func MiddleNode(head *ds.ListNode) *ds.ListNode
     MiddleNode return pointer to middle of list
 
+func NumIslands(grid [][]byte) int
+    NumIslands number of islands of 1 in matrix with sea as 0 Source:
+    https://ljun20160606.github.io/leetcode/algorithms/200/
+
 func ProductExceptSelf(nums []int) (res []int)
     ProductExceptSelf return an array answer such that answer[i] is equal to the
     product of all the elements of nums except nums[i].
@@ -151,6 +158,9 @@ func Search(nums []int, target int) int
     Search 0704 Given an array of integers nums which is sorted in ascending
     order, and an integer target, search target in nums. If target exists,
     then return its index. Otherwise, return -1.
+
+func SearchRotatedSortedArray(nums []int, target int) int
+    SearchRotatedSortedArray give the index of a target in a pivot sorted array
 
 func SortString(w string) string
     SortString Sort a string alphanumeric order
@@ -362,6 +372,9 @@ type TreeNode struct {
 
 func NewTreeNode() *TreeNode
     NewTreeNode return new pointer to TreeNode
+
+func (t *TreeNode) InsertArrValInTreeNode(arr []int)
+    InsertArrValInTreeNode insert array in newtreenode
 
 func (t *TreeNode) InsertLeft(val int)
     InsertLeft adds a new node with the given value as the left child of the
