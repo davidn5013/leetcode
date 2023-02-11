@@ -32,17 +32,17 @@ func updateMatrix(mat [][]int) (res [][]int) {
 			if res[row][col] != 1 {
 				continue
 			}
-			res[row][col] = minDist(res, row, col)
+			res[row][col] = ManhatDist(res, row, col)
 		}
 	}
 	return res
 
 }
 
-// minDist travers and return Manhattan distance
+// ManhatDist travers and return Manhattan distance
 // helper for updateMatrix
-func minDist(mat [][]int, row, col int) (minDist int) {
-	minDist = len(mat) + len(mat[row]) // maximum possible distance
+func ManhatDist(mat [][]int, row, col int) (minDist int) {
+	minDist = len(mat) + len(mat[row])
 
 	for r := 0; r < len(mat); r++ {
 		for c := 0; c < len(mat[r]); c++ {
