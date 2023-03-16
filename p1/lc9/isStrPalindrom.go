@@ -11,6 +11,7 @@ func isStrPal(x []byte) bool {
 		if x[i] != x[len(x)-1-i] {
 			return false
 		}
+
 	}
 	return true
 }

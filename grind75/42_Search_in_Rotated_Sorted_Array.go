@@ -1,5 +1,7 @@
 package grind75
 
+// leetcode 33
+
 // SearchRotatedSortedArray give the index of a target in a pivot sorted array
 func SearchRotatedSortedArray(nums []int, target int) int {
 	left, right := 0, len(nums)

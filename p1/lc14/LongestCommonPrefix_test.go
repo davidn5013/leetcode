@@ -3,7 +3,7 @@ package lc14
 import "fmt"
 
 func ExampleLongestCommonPrefix() {
-	strs := []string{"predog", "preracecar", "precar"}
+	strs := []string{"flower", "flower", "flower", "flower"}
 	fmt.Println(LongestCommonPrefix(strs))
-	// OutPut: fl
+	// OutPut: flower
 }

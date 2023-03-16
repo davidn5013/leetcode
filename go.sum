@@ -1,4 +1,6 @@
 github.com/davidn5013/snickerboa v0.0.0-20230105195943-a68b7157419b h1:vk9pDsxCHXmoEazfiqDK+cv+IkjYKKaqluFuqAEj8Wo=
 github.com/davidn5013/snickerboa v0.0.0-20230105195943-a68b7157419b/go.mod h1:gosrZiUn+7jYY/Sbteu+Ue6NZHTrKCcE9RRw5N5hHAs=
+github.com/emirpasic/gods v1.18.1 h1:FXtiHYKDGKCW2KzwZKx0iC0PQmdlorYgdFG9jPXJ1Bc=
+github.com/emirpasic/gods v1.18.1/go.mod h1:8tpGGwCnJ5H4r6BWwaV6OrWmMoPhUl5jm/FMNAnJvWQ=
 github.com/fxtlabs/primes v0.0.0-20150821004651-dad82d10a449 h1:HOYnhuVrhAVGKdg3rZapII640so7QfXQmkLkefUN/uM=
 github.com/fxtlabs/primes v0.0.0-20150821004651-dad82d10a449/go.mod h1:i+vbdOOivRRh2j+WwBkjZXloGN/+KAqfKDwNfUJeugc=
