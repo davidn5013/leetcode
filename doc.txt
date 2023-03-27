@@ -122,6 +122,9 @@ func MajorityElement(nums []int) int
     MajorityElement what number that is the moste in a list Example
     []int{2,2,1,1,1,2,2} hase four number of twos result in : 2
 
+func ManhatDist(mat [][]int, row, col int) (minDist int)
+    ManhatDist travers and return Manhattan distance helper for updateMatrix
+
 func MaxDepth(root *ds.TreeNode) int
     MaxDepth return its maximum depth of the binary tree TreeNode
 
