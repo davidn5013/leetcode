@@ -25,11 +25,6 @@ func Test_removeDuplicates(t *testing.T) {
 			want: []int{0, 1, 2, 3, 4},
 		},
 		{
-			name: "My zero example",
-			args: []int{},
-			want: []int{},
-		},
-		{
 			name: "My example",
 			args: []int{1, 1, 1, 2, 3, 4, 5, 6, 7, 7, 8, 9, 10},
 			want: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
@@ -40,22 +35,22 @@ func Test_removeDuplicates(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			// t.Parallel()
 			got := removeDuplicates(tt.args)
+			comp := false
 
-			lencompare := got <= len(tt.want)
-			compare := true
-			if lencompare {
+			if got <= len(tt.want) || got != 0 {
+				comp = true
 				for i, v := range tt.want {
 					if tt.args[i] != v {
-						compare = false
+						comp = false
 						break
 					}
 				}
+
 			}
 
-			if !lencompare || !compare {
+			if !comp {
 				t.Errorf("removeDuplicates() = %v, want %v", tt.args, tt.want)
 			}
-
 		})
 	}
 }

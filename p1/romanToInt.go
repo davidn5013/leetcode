@@ -1,8 +1,6 @@
-// package lc13 LeetCode 0013 Roman to Integer
+// Package p1 LeetCode 0013 Roman to Integer
 // Latin number to integer
 package p1
-
-import "log"
 
 // RomanToInt convert roman number to int
 func RomanToInt(s string) int {
@@ -43,14 +41,14 @@ func RomanToInt(s string) int {
 		addTwo := finddigit(two)
 
 		if addTwo != 0 {
-			log.Println(two, addTwo)
+			// log.Println(two, addTwo)
 			result += addTwo
 			i++
 			continue
 		}
 
 		add := finddigit(romChar)
-		log.Println(romChar, add)
+		// log.Println(romChar, add)
 		result += add
 	}
 	return result
