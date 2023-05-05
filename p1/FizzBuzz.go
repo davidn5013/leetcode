@@ -1,5 +1,4 @@
-// Package lc412 Fizz Buzz
-package lc412
+package p1
 
 import "strconv"
 

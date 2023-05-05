@@ -1,4 +1,4 @@
-package lc14
+package p1
 
 import "fmt"
 

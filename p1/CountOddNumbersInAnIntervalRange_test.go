@@ -1,4 +1,4 @@
-package lc1523
+package p1
 
 import "fmt"
 

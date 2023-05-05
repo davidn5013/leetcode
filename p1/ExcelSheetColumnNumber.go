@@ -1,4 +1,4 @@
-package lc171
+package p1
 
 // titleToNumber excel column letter to numbers
 func titleToNumber(columnTitle string) int {

@@ -1,4 +1,4 @@
-package lc171
+package p1
 
 import (
 	"fmt"

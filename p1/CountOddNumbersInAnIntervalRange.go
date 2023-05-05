@@ -1,5 +1,4 @@
-// package lc1523 Count Odd Numbers in an Interval Range
-package lc1523
+package p1
 
 // CountOdds count odd number in range
 func CountOdds(low int, high int) int {

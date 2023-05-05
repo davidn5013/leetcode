@@ -1,10 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println(zeroFilledSubarray([]int{1, 3, 0, 0, 2, 0, 0, 4}))
-}
+package p1
 
 func zeroFilledSubarray(nums []int) int64 {
 	var r, c int64

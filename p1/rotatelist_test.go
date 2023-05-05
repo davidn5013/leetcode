@@ -1,4 +1,4 @@
-package lc61
+package p1
 
 import (
 	"fmt"

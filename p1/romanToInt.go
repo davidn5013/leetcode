@@ -1,6 +1,6 @@
 // package lc13 LeetCode 0013 Roman to Integer
 // Latin number to integer
-package lc13
+package p1
 
 import "log"
 

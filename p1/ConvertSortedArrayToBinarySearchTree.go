@@ -1,4 +1,4 @@
-package lc108
+package p1
 
 import (
 	"fmt"

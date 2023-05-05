@@ -1,4 +1,4 @@
-package lc61
+package p1
 
 // ListNode definition for singly-linked list
 type ListNode struct {

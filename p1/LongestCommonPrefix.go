@@ -1,5 +1,5 @@
 // package lc14 Longest Common Prefix
-package lc14
+package p1
 
 import (
 	"log"

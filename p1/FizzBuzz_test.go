@@ -1,4 +1,4 @@
-package lc412
+package p1
 
 import (
 	"reflect"
