@@ -65,3 +65,26 @@ func canConstruct3(ransom string, magazine string) bool {
 
 	return true
 }
+
+func canConstruct4(ransom string, magazine string) bool {
+	ransom = strings.ToUpper(ransom)
+	magazine = strings.ToUpper(magazine)
+	letterCount := make(map[rune]int, len(magazine)-1)
+
+	for _, v := range magazine {
+		if v >= 'A' && v <= 'Z' {
+			letterCount[v]++
+		}
+	}
+
+	for _, v := range ransom {
+		if v >= 'A' && v <= 'Z' {
+			if letterCount[v] == 0 {
+				return false
+			}
+			letterCount[v]--
+		}
+	}
+
+	return true
+}

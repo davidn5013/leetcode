@@ -18,7 +18,11 @@ func Example_canConstruct() {
 	fmt.Printf("%#v ", canConstruct3("HELLO", "Hi there lolo"))
 	fmt.Printf("%#v ", canConstruct3("abcdef", "Hi there lolo"))
 	fmt.Printf("%#v ", canConstruct3("Hello", "tere lolo"))
-	// OutPut: true true false false true true false false true true false false
+	fmt.Printf("%#v ", canConstruct4("Hello", "Hi there lolo"))
+	fmt.Printf("%#v ", canConstruct4("HELLO", "Hi there lolo"))
+	fmt.Printf("%#v ", canConstruct4("abcdef", "Hi there lolo"))
+	fmt.Printf("%#v ", canConstruct4("Hello", "tere lolo"))
+	// OutPut: true true false false true true false false true true false false true true false false
 }
 
 func Example_canConstruct2() {
@@ -29,25 +33,26 @@ func Example_canConstruct2() {
 }
 
 func Benchmark_canConstruct(b *testing.B) {
+	ransom := "Hello"
+	magazine := "Hi there lolo"
 	b.Run("using byte array", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			ransom := "Hello"
-			magazine := "Hi there lolo"
 			canConstruct(ransom, magazine)
 		}
 	})
 	b.Run("using strings", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			ransom := "Hello"
-			magazine := "Hi there lolo"
 			canConstruct2(ransom, magazine)
 		}
 	})
-	b.Run("using strings", func(b *testing.B) {
+	b.Run("using runes", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			ransom := "Hello"
-			magazine := "Hi there lolo"
 			canConstruct3(ransom, magazine)
+		}
+	})
+	b.Run("using map", func(b *testing.B) {
+		for i := 0; i < b.N; i++ {
+			canConstruct4(ransom, magazine)
 		}
 	})
 }
