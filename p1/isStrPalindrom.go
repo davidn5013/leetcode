@@ -1,4 +1,3 @@
-// package lc9 is LeetCode 0009 IsPalindrome Check if a integer is a palindrome.
 package p1
 
 import (

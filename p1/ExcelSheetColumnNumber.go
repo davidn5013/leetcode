@@ -39,6 +39,6 @@ func IntPow(n, m int) int {
 }
 
 // toInt rune to in 'A' = 1
-func toInt(r rune) int {
-	return int(r) - 64
-}
+// func toInt(r rune) int {
+// 	return int(r) - 64
+// }

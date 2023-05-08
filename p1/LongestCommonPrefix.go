@@ -1,4 +1,3 @@
-// package lc14 Longest Common Prefix
 package p1
 
 import (
