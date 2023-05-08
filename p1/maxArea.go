@@ -1,5 +1,7 @@
 package p1
 
+import "math"
+
 // 11. Container With Most Water
 
 func maxArea(height []int) int {
@@ -10,20 +12,9 @@ func maxArea(height []int) int {
 
 	for i := 0; i < len(height); i++ {
 		for j := i + 1; j < len(height); j++ {
-			minH := min(height[i], height[j])
-			vol := minH * (j - i)
-			if maxA < vol {
-				maxA = vol
-			}
-
+			minH := int(math.Min(float64(height[i]), float64(height[j])))
+			maxA = int(math.Max(float64(maxA), float64(minH*(j-i))))
 		}
 	}
 	return maxA
-}
-
-func min(x, y int) int {
-	if x < y {
-		return x
-	}
-	return y
 }
